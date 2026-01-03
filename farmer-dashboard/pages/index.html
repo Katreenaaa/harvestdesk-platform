@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HarvestDesk</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="../components/footer/footer.css" />
+
+    <link rel="stylesheet" href="../css/homepage.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <section class="hero">
+      <h2>Empowering Farmers with Smart Tools</h2>
+      <p>
+        Access real-time weather data, renewable energy solutions, and expert
+        agricultural insights—all in one powerful platform
+      </p>
+      <button
+        onclick="window.location.href='services.html'"
+        class="view-service-button"
+      >
+        View Services
+      </button>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            HarvestDesk is your trusted partner in modern agriculture. We
+            provide digital tools, insights, and solutions to help farmers
+            maximize yield, reduce costs, and adopt sustainable practices.
+          </p>
+          <button onclick="window.location.href='about.html'">
+            Learn More
+          </button>
+        </div>
+        <div class="about-image">
+          <img src="../images/farmers-working.jpeg" alt="Farmers Working" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat">
+          <h3>2000+</h3>
+          <p>Farmers Supported</p>
+        </div>
+        <div class="stat">
+          <h3>120+</h3>
+          <p>Services Offered</p>
+        </div>
+        <div class="stat">
+          <h3>24/7</h3>
+          <p>Support Available</p>
+        </div>
+        <div class="stat">
+          <h3>10+</h3>
+          <p>Years Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <h1 class="intro">Our Core Services</h1>
+
+    <section class="services-preview">
+      <div class="preview-card">
+        <img src="../images/weather.jpg" alt="Weather" />
+        <h3>Weather Intelligence</h3>
+        <p>
+          Access real-time weather data, forecasts, and agricultural insights to
+          optimize your planning, irrigation and harvesting schedules.
+        </p>
+        <button
+          onclick="window.location.href='weather.html'"
+          class="preview-button"
+        >
+          View Weather
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/solar-energy.jpg" alt="Energy" />
+        <h3>Energy / Solar Support</h3>
+        <p>
+          Discover renewable energy options to reduce costs, increase energy
+          independence, and contribute to sustinable farming practices.
+        </p>
+        <button
+          onclick="window.location.href='solar.html'"
+          class="preview-button"
+        >
+          Learn More
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/tips.jpg" alt="Farm Tips" />
+        <h3>Farm Tips</h3>
+        <p>
+          Access a comprehensive library of best practices, seasonal guides, and
+          expert advice to maximize yields and farm efficiency.
+        </p>
+        <button
+          onclick="window.location.href='tips.html'"
+          class="preview-button"
+        >
+          Farm tips
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="contact-preview-card">
+        <h2>Ready to Transform Your Farm?</h2>
+        <p>
+          Join thousands of farmers who are already benefiting from our
+          comprehensive digital platform
+        </p>
+        <button
+          class="contact-support-button"
+          onclick="window.location.href='contact.html'"
+        >
+          Contact Our Support
+        </button>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="../script/script.js"></script>
+    <script>
+      // Scroll to tab if URL has hash
+      window.addEventListener("load", () => {
+        const hash = window.location.hash.replace("#", "");
+        if (hash) {
+          const tabButton = document.querySelector(
+            `.tab-btn[onclick*="${hash}"]`
+          );
+          if (tabButton) tabButton.click();
+        }
+      });
+    </script>
+  </body>
+</html>

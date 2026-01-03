@@ -1,0 +1,209 @@
+/* =========================
+   Solar Section
+========================= */
+.service-content {
+  position: relative;
+  padding: 5rem 2rem 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn i {
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  color: #2d7530;
+  transform: translateY(-2px);
+}
+
+/* Section Titles */
+.service-content h3,
+.solar-benefits h4,
+.solar-applications h4 {
+  font-family: var(--font-title);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.service-content h3 {
+  font-size: 2.8rem;
+  color: #2d7530;
+}
+
+.solar-benefits h4,
+.solar-applications h4 {
+  color: #2d7530;
+  font-size: 1.6rem;
+}
+
+/* =========================
+   Benefits Grid
+========================= */
+.benefits-grid {
+  background: white;
+  padding: 3rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+}
+
+.benefit-card {
+  background: rgba(240, 238, 238, 0.158);
+  border: 2px solid #2d7530;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card .icon {
+  font-size: 2.5rem;
+  color: #2d7530;
+  margin-bottom: 1rem;
+  animation: bounce 6s infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.benefit-card h5 {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: #205222;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* =========================
+   Applications Section
+========================= */
+.solar-applications {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.solar-applications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.solar-applications ul li {
+  background-color: rgba(45, 117, 47, 0.129);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.3rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+  flex-direction: row;
+  color: #2d7530;
+  line-height: 1.5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.solar-applications ul li i {
+  font-size: 1.5rem;
+  color: #2d7530;
+  margin-bottom: 0.6rem;
+}
+
+.solar-applications ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Responsive Layout
+========================= */
+@media (max-width: 992px) {
+  .benefits-grid,
+  .solar-applications ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid,
+  .solar-applications ul {
+    grid-template-columns: 1fr;
+  }
+
+  .back-btn {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .benefit-card,
+  .solar-applications ul li {
+    padding: 1.2rem 1rem;
+  }
+
+  .benefit-card h5,
+  .solar-applications ul li p {
+    font-size: 1rem;
+  }
+
+  .benefit-card .icon,
+  .solar-applications ul li i {
+    font-size: 2rem;
+  }
+}

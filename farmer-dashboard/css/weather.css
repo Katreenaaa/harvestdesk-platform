@@ -1,0 +1,241 @@
+/* =========================
+   Back Button
+========1.5rem================= */
+.back-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4caf50;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn i {
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  color: #2d7530;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Weather Page Layout
+========================= */
+.weather-page {
+  position: relative; /* anchor for back button */
+  min-height: 100vh;
+  padding: 7rem 1rem 3rem;
+  background: #e3f2fd;
+  font-family: var(--font-primary, "Montserrat", sans-serif);
+  color: #333;
+}
+
+/* =========================
+   Current Weather Dashboard
+========================= */
+.current-weather {
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  padding: 2.5rem;
+  border-radius: 18px;
+  text-align: center;
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(-45deg, #4facfe, #00f2fe, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================
+   Main Weather Info
+========================= */
+.weather-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-main i {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.weather-temp .temp {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.weather-temp .condition {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   Weather Details
+========================= */
+.weather-details {
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.weather-details div {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.weather-details i {
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* =========================
+   Extended Forecast
+========================= */
+.forecast {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.forecast h2 {
+  font-family: var(--font-title, "Montserrat", sans-serif);
+  font-size: 2rem;
+  color: #2d7530;
+  margin-bottom: 1.5rem;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  flex: 1 1 130px;
+  max-width: 150px;
+
+  padding: 1.5rem 1rem;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.forecast-card i {
+  font-size: 2.2rem;
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.forecast-card .day {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.forecast-card .temp {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.forecast-card .range {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 992px) {
+  .weather-details {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-temp .temp {
+    font-size: 2.4rem;
+  }
+
+  .forecast-card {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-page {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .weather-temp .temp {
+    font-size: 2rem;
+  }
+
+  .forecast-card {
+    max-width: 100%;
+  }
+
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    left: 1rem;
+  }
+}

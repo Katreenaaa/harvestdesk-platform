@@ -1,0 +1,63 @@
+/* ===== Global Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+
+:root {
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  --font-title: "Playfair Display", serif;
+  --font-fun: "Baloo 2", cursive;
+  --font-logo: "Playball", cursive;
+}
+
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box; /* ensures padding/margin don’t break layout */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #4caf50; /* subtle global hover effect */
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* maintain aspect ratio */
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}

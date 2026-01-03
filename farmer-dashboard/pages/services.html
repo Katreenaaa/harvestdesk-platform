@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - HarvestDesk</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/services.css" />
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="../components/footer/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="services-hero">
+      <div class="hero-slide slide1"></div>
+      <div class="hero-slide slide2"></div>
+      <div class="hero-overlay"></div>
+      <h1>Our Services</h1>
+      <p>
+        Explore our wide range of solutions to support modern farming and
+        renewable energy.
+      </p>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+      <div class="preview-card">
+        <img src="../images/weather.jpg" alt="Weather" />
+        <h3>Weather Intelligence</h3>
+        <p>
+          Real-time weather data and forecasts to help farmers plan irrigation
+          and harvesting.
+        </p>
+        <button
+          onclick="window.location.href='weather.html'"
+          class="preview-button"
+        >
+          View Service
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/solar-energy.jpg" alt="Energy" />
+        <h3>Energy / Solar Support</h3>
+        <p>
+          Reduce costs, increase energy independence, and adopt sustainable
+          farming practices.
+        </p>
+        <button
+          onclick="window.location.href='solar.html'"
+          class="preview-button"
+        >
+          View Service
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/tips.jpg" alt="Farm Tips" />
+        <h3>Farm Tips</h3>
+        <p>
+          Access best practices, seasonal guides, and expert advice to maximize
+          yields and efficiency.
+        </p>
+        <button
+          onclick="window.location.href='tips.html'"
+          class="preview-button"
+        >
+          View Service
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/irrigation.jpg" alt="Irrigation" />
+        <h3>Smart Irrigation</h3>
+        <p>
+          Automated irrigation systems to conserve water and optimize crop
+          growth.
+        </p>
+        <button
+          onclick="window.location.href='irrigation.html'"
+          class="preview-button"
+        >
+          View Service
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/greenhouse.jpg" alt="Greenhouse" />
+        <h3>Greenhouse Management</h3>
+        <p>
+          Climate-controlled greenhouses for year-round farming and improved
+          yields.
+        </p>
+        <button
+          onclick="window.location.href='greenhouse.html'"
+          class="preview-button"
+        >
+          View Service
+        </button>
+      </div>
+
+      <div class="preview-card">
+        <img src="../images/farm-equipment.jpg" alt="Equipment" />
+        <h3>Farm Equipment</h3>
+        <p>Advanced machinery and tools for efficient farming operations.</p>
+        <button
+          onclick="window.location.href='equipment.html'"
+          class="preview-button"
+        >
+          View Service
+        </button>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="../script/script.js"></script>
+
+    <script>
+      // Smooth crossfade slideshow
+      window.addEventListener("load", () => {
+        const slides = [
+          document.querySelector(".slide1"),
+          document.querySelector(".slide2"),
+        ];
+        const images = [
+          "../images/slideshow-img2.jpg",
+          "../images/solar-energy.jpg",
+        ];
+
+        let current = 0;
+        let next = 1;
+
+        // Initialize first slide
+        slides[0].style.backgroundImage = `url('${images[0]}')`;
+        slides[0].classList.add("active");
+        slides[1].style.backgroundImage = `url('${images[1]}')`;
+
+        setInterval(() => {
+          // Fade in next slide
+          slides[next].classList.add("active");
+          slides[current].classList.remove("active");
+
+          // Update images for next cycle
+          current = (current + 1) % images.length;
+          next = (current + 1) % images.length;
+          slides[next].style.backgroundImage = `url('${images[next]}')`;
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>

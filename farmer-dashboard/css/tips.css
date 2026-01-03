@@ -1,0 +1,152 @@
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn i {
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  color: #2d7530;
+  transform: translateY(-2px);
+}
+
+/* Tips Page */
+.tips-page {
+  background: #f5f9f4;
+  padding: 6rem 2rem 3rem 2rem;
+  font-family: var(--font-primary, "Montserrat", sans-serif);
+  color: #333;
+  position: relative;
+}
+
+.tips-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.tips-container h1 {
+  text-align: center;
+  font-family: var(--font-title, "Georgia", serif);
+  font-size: 2.8rem;
+  color: #2d7530;
+  margin-bottom: 3rem;
+}
+
+/* Tip Sections */
+.tip-section {
+  background: #ffffff;
+  border-left: 6px solid #4caf50;
+  padding: 2rem 2rem 2rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tip-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* FA Icons for Tip Sections */
+.tip-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: #2d7530;
+}
+
+.tip-icon i {
+  font-size: 2rem;
+  color: #2d7530;
+}
+
+.tip-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2d7530;
+}
+
+.tip-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.tip-section ul li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.tip-section ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tip-section {
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+  }
+
+  .tip-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .tip-icon i {
+    font-size: 1.8rem;
+  }
+
+  .tips-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .back-btn {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tip-section {
+    padding: 1rem 1rem 1rem 1.5rem;
+  }
+
+  .tip-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .tip-icon i {
+    font-size: 1.6rem;
+  }
+
+  .tips-container h1 {
+    font-size: 1.8rem;
+  }
+}

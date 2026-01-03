@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Intelligence - HarvestDesk</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/weather.css" />
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="../components/footer/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <section class="weather-page">
+      <!-- Back Button -->
+      <a href="services.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i> Back to Services</a
+      >
+
+      <!-- Current Weather -->
+      <div class="current-weather">
+        <div class="weather-main">
+          <i class="fas fa-cloud-sun animated-icon"></i>
+          <div class="weather-temp">
+            <span class="temp">28°C</span>
+            <span class="condition">Partly Cloudy</span>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div><i class="fas fa-tint animated-icon"></i> Humidity: 65%</div>
+          <div><i class="fas fa-wind animated-icon"></i> Wind: 12 km/h</div>
+          <div><i class="fas fa-sun animated-icon"></i> UV Index: 7</div>
+          <div>
+            <i class="fas fa-temperature-high animated-icon"></i> Pressure: 1013
+            hPa
+          </div>
+        </div>
+      </div>
+
+      <!-- Extended Forecast -->
+      <div class="forecast">
+        <h2>Extended Forecast</h2>
+        <div class="forecast-cards">
+          <div class="forecast-card">
+            <i class="fas fa-sun animated-icon"></i>
+            <span class="day">Tomorrow</span>
+            <span class="temp">30°C</span>
+            <span class="range">H: 32° / L: 24°</span>
+          </div>
+          <div class="forecast-card">
+            <i class="fas fa-cloud animated-icon"></i>
+            <span class="day">Day 3</span>
+            <span class="temp">27°C</span>
+            <span class="range">H: 29° / L: 22°</span>
+          </div>
+          <div class="forecast-card">
+            <i class="fas fa-cloud-showers-heavy animated-icon"></i>
+            <span class="day">Day 4</span>
+            <span class="temp">26°C</span>
+            <span class="range">H: 28° / L: 21°</span>
+          </div>
+          <div class="forecast-card">
+            <i class="fas fa-cloud-sun animated-icon"></i>
+            <span class="day">Day 5</span>
+            <span class="temp">29°C</span>
+            <span class="range">H: 31° / L: 23°</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
