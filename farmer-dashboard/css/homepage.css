@@ -167,10 +167,13 @@
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
   .stats-container .stats {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    column-gap: 2rem;
+    row-gap: 3rem; /* 👈 more vertical spacing */
   }
 
   .stats-container .stat {
@@ -221,11 +224,15 @@
 /* ===== Services Preview ===== */
 .services-preview {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* dynamic columns */
   gap: 2rem;
   padding: 2rem 1.25rem;
   max-width: 1100px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 .preview-card {
@@ -237,6 +244,8 @@
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   padding-bottom: 2rem;
+  width: 100%;
+  max-width: 360px;
 }
 
 .preview-card:hover {
@@ -348,7 +357,7 @@
 
 @media (max-width: 1024px) {
   .services-preview {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 

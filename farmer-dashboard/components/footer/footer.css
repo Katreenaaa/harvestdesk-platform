@@ -65,8 +65,9 @@ footer {
 /* Social Icons */
 .footer-section.about .socials {
   display: flex;
-
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .footer-section.about .socials a {
@@ -114,8 +115,6 @@ footer {
 .footer-section.links ul li a {
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
-  text-decoration: none;
   display: inline-block;
   transition: 0.3s;
   margin-bottom: 0.6rem;
@@ -144,21 +143,23 @@ footer {
   transform: translateX(6px);
 }
 
+/* Contact */
 .footer-section.contact ul li {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: start;
+  column-gap: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 .footer-section.contact ul li .icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 32px;
+  height: 32px;
   background-color: rgba(76, 175, 80, 0.15);
   border-radius: 6px;
-  padding: 6px;
-  min-width: 28px;
-  min-height: 28px;
   font-size: 1rem;
   color: #4caf50;
 }
@@ -204,26 +205,36 @@ footer {
    RESPONSIVE
 ========================= */
 
-/* Tablet */
+/* Tablet – 2x2 grid & spacing */
+/* Tablet 2x2 footer */
 @media (max-width: 900px) {
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 600px; /* limit total width so grid is centered */
+    margin: 0 auto; /* center the grid */
+    gap: 1.8rem; /* vertical and horizontal spacing */
   }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 0.8rem;
+
+  .footer-section.about {
+    grid-column: span 2;
     text-align: center;
+    align-items: center;
   }
-  .logo {
-    justify-content: center;
-  }
+
   .footer-section.about .socials {
     justify-content: center;
   }
 
-  .footer-section.links {
+  .footer-section.links,
+  .footer-section.services,
+  .footer-section.contact {
+    text-align: left; /* or center if you want */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
     text-align: center;
   }
 }
@@ -237,7 +248,7 @@ footer {
   .footer-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.3rem;
+    gap: 2rem 1.5rem;
     width: 100%;
   }
 
