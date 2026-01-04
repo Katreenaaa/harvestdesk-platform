@@ -167,29 +167,43 @@
 }
 
 /* ===== Responsive ===== */
+/* ===== Stats Section - Responsive Grid ===== */
+
+/* Tablet: 2x2 grid with spacing */
 @media (min-width: 600px) and (max-width: 900px) {
   .stats-container .stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 3rem;
+    justify-content: center;
   }
 
   .stats-container .stat {
-    flex: 1 1 45%;
-    max-width: 45%;
+    width: 100%;
+    text-align: center;
   }
 }
 
+/* Mobile: 1 column */
 @media (max-width: 600px) {
   .stats-container .stats {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
   .stats-container .stat {
-    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra small screens: same as mobile */
+@media (max-width: 480px) {
+  .stats-container .stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
