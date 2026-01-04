@@ -102,24 +102,61 @@ nav a:hover::after {
 /* =========================
    RESPONSIVE (TABLET + MOBILE)
 ========================= */
-@media (max-width: 900px) {
+/* =========================
+   HAMBURGER MENU
+========================= */
+.hamburger {
+  display: none; /* hidden by default */
+  flex-direction: column;
+  gap: 6px; /* space between lines */
+  cursor: pointer;
+  z-index: 1100; /* above nav */
+}
+
+.hamburger span {
+  width: 28px; /* make lines slightly longer */
+  height: 3px; /* thicker lines so they’re visible on tablets */
+  background: #2d7530;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================
+   RESPONSIVE (TABLETS + MOBILE)
+========================= */
+@media (max-width: 1024px) {
+  /* covers tablets */
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+
   nav {
     position: absolute;
     top: 100%;
     right: 1.5rem;
-    width: 240px;
-
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    border-radius: 14px;
-    padding: 1.2rem 1rem;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-
+    width: 220px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     display: none;
     flex-direction: column;
-    gap: 1.2rem; /* 👈 PROPER SPACING */
+    gap: 1rem;
   }
 
   nav.show {
@@ -127,16 +164,11 @@ nav a:hover::after {
   }
 
   nav a {
-    font-size: 1.05rem;
-    padding: 0.6rem 0.5rem;
-    text-align: left;
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 
   nav a::after {
     display: none;
-  }
-
-  .hamburger {
-    display: flex;
   }
 }

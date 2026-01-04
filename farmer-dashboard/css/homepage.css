@@ -172,8 +172,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 2rem;
-    row-gap: 3rem; /* 👈 more vertical spacing */
+    column-gap: 3rem;
+    row-gap: 3rem;
   }
 
   .stats-container .stat {

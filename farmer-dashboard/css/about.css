@@ -111,6 +111,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
+  justify-content: centers;
   text-align: center;
 }
 
@@ -217,18 +218,20 @@
   }
 }
 
-/* Stats responsiveness */ /* ===== Responsive ===== */
-@media (max-width: 900px) {
+/* Stats responsiveness */
+@media (min-width: 600px) and (max-width: 900px) {
   .stats {
-    flex-direction: row;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+    column-gap: 3rem;
+    justify-content: center;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
